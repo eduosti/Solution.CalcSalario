@@ -1,0 +1,32 @@
+[
+  {
+    "MenorBaseDeCalculo": 0,
+    "MaiorBaseDeCalculo": 2259.20,
+    "Aliquota": 0,
+    "ParcelaADeduzirDoIR": 0
+  },
+  {
+    "MenorBaseDeCalculo": 2259.21,
+    "MaiorBaseDeCalculo": 2826.65,
+    "Aliquota": 7.5,
+    "ParcelaADeduzirDoIR": 169.44
+  },
+  {
+    "MenorBaseDeCalculo": 2826.66,
+    "MaiorBaseDeCalculo": 3751.05,
+    "Aliquota": 15,
+    "ParcelaADeduzirDoIR": 381.44
+  },
+  {
+    "MenorBaseDeCalculo": 3751.06,
+    "MaiorBaseDeCalculo": 4664.68,
+    "Aliquota": 22.5,
+    "ParcelaADeduzirDoIR": 662.77
+  },
+  {
+    "MenorBaseDeCalculo": 4664.68,
+    "MaiorBaseDeCalculo": 100000000000000,
+    "Aliquota": 27.5,
+    "ParcelaADeduzirDoIR": 896
+  }
+]

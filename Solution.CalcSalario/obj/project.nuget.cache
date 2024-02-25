@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "aG2ZZz8UFcnydDg0Iu8bnMCGJ+zOobVp1Pus6ado5oXohjyxdynkEjJBJxSVqJqihVpwjhJJ/J2RK1AFaNzZuw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Vanildo\\source\\repos\\Solution.CalcSalario\\Solution.CalcSalario\\Solution.CalcSalario.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Vanildo\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
