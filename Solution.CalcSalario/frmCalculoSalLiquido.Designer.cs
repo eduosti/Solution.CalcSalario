@@ -261,7 +261,7 @@ namespace Solution.CalcSalario
             cboDependente.Location = new Point(249, 149);
             cboDependente.Name = "cboDependente";
             cboDependente.Size = new Size(121, 23);
-            cboDependente.TabIndex = 1;
+            cboDependente.TabIndex = 3;
             // 
             // label11
             // 
@@ -400,7 +400,7 @@ namespace Solution.CalcSalario
             txtSalario.Location = new Point(249, 66);
             txtSalario.Name = "txtSalario";
             txtSalario.Size = new Size(121, 23);
-            txtSalario.TabIndex = 36;
+            txtSalario.TabIndex = 1;
             txtSalario.Text = "0,00";
             // 
             // frmCalculoSalLiquido
