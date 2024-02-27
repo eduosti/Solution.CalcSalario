@@ -1,10 +1,13 @@
-using Solution.CalcSalario.IR;
 using System.ComponentModel;
 using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
 using static CalculoSalLiquido;
+using IR;
+using INSS;
+using DEPENDENTE;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using OfficeOpenXml.Drawing;
 
 
 namespace Solution.CalcSalario
@@ -14,6 +17,7 @@ namespace Solution.CalcSalario
         private bool bSalvarAlteracaoDataGridInss = false;
         private bool bSalvarAlteracaoDataGridIr = false;
         private bool bSalvarAlteracaoDataGridDependente = false;
+        private bool bSalvarAlteracaoDataGridValorMaxINSS = false;
 
         public frmCalculoSalLiquido()
         {
@@ -21,6 +25,9 @@ namespace Solution.CalcSalario
 
             List<InssDados> inssTables = InssDados.LoadInssTable();
             DataGridInss.DataSource = inssTables;
+
+            List<ValorLimiteINSS> ValorLimiteInssList = ValorLimiteINSS.LoadInssValorLimite();
+            DataGridValorMaxINSS.DataSource = ValorLimiteInssList;
 
             List<IRDados> irDadosTable = IRDados.LoadTableIR();
             DataGridIr.DataSource = irDadosTable;
@@ -53,9 +60,10 @@ namespace Solution.CalcSalario
             lblResultSalario.Text = string.Format("R$ {0:N}", txtSalario.Text);
             lblResultValorDependente.Text = string.Format("R$ {0:N}", objCalcSalLiquResult.ValorTotalDependente);
             lblResultInss.Text = string.Format("R$ {0,00:N}", objCalcSalLiquResult.DeducaoInss);
-            lblResultIr.Text = string.Format("R$ {0,00:N}", objCalcSalLiquResult.DeducaoIr.ToString());
+            lblResultIr.Text = string.Format("R$ {0,00:N}", objCalcSalLiquResult.DeducaoIr);
             lblResultDesconto.Text = string.Format("R$ {0,00:N}", varValorDesc);
-            lblResultSalarioLiquido.Text = string.Format("R$ {0,00:N}", varSalario);
+            lblResultSalarioLiquido.Text = string.Format("R$ {0,00:N}", objCalcSalLiquResult.SalarioLiquido);
+
 
         }
         private void txtDescontar_KeyPress(object sender, EventArgs e)
@@ -103,7 +111,7 @@ namespace Solution.CalcSalario
 
         }
 
-        
+
         private void DataGridInss_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             bSalvarAlteracaoDataGridInss = true;
@@ -119,11 +127,16 @@ namespace Solution.CalcSalario
             bSalvarAlteracaoDataGridDependente = true;
         }
 
+        private void DataGridValorMaxINSS_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            bSalvarAlteracaoDataGridValorMaxINSS = true;
+        }
+
 
         private void btnSalvarTabelas_Click(object sender, EventArgs e)
         {
 
-            if (!bSalvarAlteracaoDataGridInss && !bSalvarAlteracaoDataGridIr && !bSalvarAlteracaoDataGridDependente)
+            if (!bSalvarAlteracaoDataGridInss && !bSalvarAlteracaoDataGridIr && !bSalvarAlteracaoDataGridDependente && !bSalvarAlteracaoDataGridValorMaxINSS)
             {
                 MessageBox.Show("Nenhuma Alteração foi encontrada nas Tabelas de (INSS, IR ou Dependente)! Tente Alterar novamente e em seguida clique novamente no botão de Salvar!", "Não Houve Alterações", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
@@ -142,7 +155,24 @@ namespace Solution.CalcSalario
 
                     bSalvarAlteracaoDataGridInss = false;
 
-                    MessageBox.Show("Alteração da tabela INSS realizada com sucesso!", "Sucesso!", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("Alteração da tabela INSS realizada com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+
+            if (bSalvarAlteracaoDataGridValorMaxINSS)
+            {
+                // Prompt the user for confirmation.
+                DialogResult result = MessageBox.Show("Deseja realmente salvar as alterações de Valor Máximo INSS?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                // If the user clicked Yes, save the data.
+                if (result == DialogResult.Yes)
+                {
+                    List<ValorLimiteINSS> ValorLimiteInssList = (List<ValorLimiteINSS>)DataGridValorMaxINSS.DataSource;
+                    ValorLimiteINSS.SaveValorMaxInss(ValorLimiteInssList);
+
+                    bSalvarAlteracaoDataGridValorMaxINSS = false;
+
+                    MessageBox.Show("Alteração da tabela Valor Máximo INSS realizada com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
 
@@ -182,6 +212,36 @@ namespace Solution.CalcSalario
             }
         }
 
-      
+        private void btnSalvarExcel_Click(object sender, EventArgs e)
+        {
+
+            // Cria um novo objeto SaveFileDialog
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+
+            // Define as propriedades do SaveFileDialog
+            saveFileDialog.Filter = "Arquivos Excel (*.xlsx)|*.xlsx|Todos os arquivos (*.*)|*.*"; // Define os tipos de arquivos que podem ser salvos
+            saveFileDialog.Title = "Salvar arquivo Excel"; // Define o título da caixa de diálogo
+            saveFileDialog.FileName = "Resultado_" + DateTime.Now.ToString("yyyyMMdd") + DateTime.Now.ToString("hhmm") + ".xlsx"; // Define o nome padrão do arquivo
+
+            // Exibe a caixa de diálogo e obtém a resposta do usuário
+            DialogResult result = saveFileDialog.ShowDialog();
+
+            // Verifica se o usuário clicou no botão Salvar
+            if (result == DialogResult.OK)
+            {
+
+                // Salva o arquivo no caminho especificado pelo usuário
+                double salario = Double.Parse((txtSalario.Text.Replace("R$", "")).Trim());
+                int dependente = int.Parse(cboDependente.Text);
+                double valorDependente = Double.Parse((lblResultValorDependente.Text.Replace("R$", "")).Trim());
+                double inss = Double.Parse((lblResultInss.Text.Replace("R$", "")).Trim());
+                double ir = Double.Parse((lblResultIr.Text.Replace("R$", "")).Trim());
+                double descontar = Double.Parse((txtDescontar.Text.Replace("R$", "")).Trim());
+                double salarioLiquido = Double.Parse((lblResultSalarioLiquido.Text.Replace("R$", "")).Trim());
+
+
+                SalvaDados.SalvaDados.SalvaParaExcel(salario, dependente, valorDependente, inss, ir, descontar, salarioLiquido, saveFileDialog.FileName);
+            }
+        }
     }
 }

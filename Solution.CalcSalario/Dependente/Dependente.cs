@@ -5,6 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+namespace DEPENDENTE
+{
     public class DependenteDados
     {
         public double ValorDependente { get; set; }
@@ -20,12 +23,12 @@ using System.Threading.Tasks;
             return dependenteTables;
         }
 
-        
 
-    public static void SaveDependenteTable(List<DependenteDados> dependenteTables)
-    {
-        string json = JsonConvert.SerializeObject(dependenteTables, Formatting.Indented);
-        File.WriteAllText("Dependente/DependenteTable.json", json);
+
+        public static void SaveDependenteTable(List<DependenteDados> dependenteTables)
+        {
+            string json = JsonConvert.SerializeObject(dependenteTables, Formatting.Indented);
+            File.WriteAllText("Dependente/DependenteTable.json", json);
+        }
     }
 }
-

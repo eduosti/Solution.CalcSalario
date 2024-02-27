@@ -9,24 +9,24 @@
     "MinSalary": 1412.01,
     "MaxSalary": 2666.68,
     "Percentage": 9,
-    "FixedValue": 19.8
+    "FixedValue": 21.18
   },
   {
     "MinSalary": 2666.69,
     "MaxSalary": 4000.03,
     "Percentage": 12,
-    "FixedValue": 96.94
+    "FixedValue": 101.18
   },
   {
     "MinSalary": 4000.04,
     "MaxSalary": 7786.02,
     "Percentage": 14,
-    "FixedValue": 174.08
+    "FixedValue": 181.18
   },
   {
     "MinSalary": 7786.03,
-    "MaxSalary": 100000000000000,
+    "MaxSalary": 0,
     "Percentage": 14,
-    "FixedValue": 174.08
+    "FixedValue": 181.18
   }
 ]

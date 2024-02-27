@@ -1,0 +1,155 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Aplicacoes_eosti\\Solution.CalcSalario\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DF77ECE7-B310-4875-8247-3529A2056C52}|Solution.CalcSalario\\Solution.CalcSalario.csproj|c:\\aplicacoes_eosti\\solution.calcsalario\\solution.calcsalario\\inss\\inss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF77ECE7-B310-4875-8247-3529A2056C52}|Solution.CalcSalario\\Solution.CalcSalario.csproj|solutionrelative:solution.calcsalario\\inss\\inss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF77ECE7-B310-4875-8247-3529A2056C52}|Solution.CalcSalario\\Solution.CalcSalario.csproj|c:\\aplicacoes_eosti\\solution.calcsalario\\solution.calcsalario\\calculosalliquido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF77ECE7-B310-4875-8247-3529A2056C52}|Solution.CalcSalario\\Solution.CalcSalario.csproj|solutionrelative:solution.calcsalario\\calculosalliquido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF77ECE7-B310-4875-8247-3529A2056C52}|Solution.CalcSalario\\Solution.CalcSalario.csproj|c:\\aplicacoes_eosti\\solution.calcsalario\\solution.calcsalario\\frmcalculosalliquido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF77ECE7-B310-4875-8247-3529A2056C52}|Solution.CalcSalario\\Solution.CalcSalario.csproj|solutionrelative:solution.calcsalario\\frmcalculosalliquido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF77ECE7-B310-4875-8247-3529A2056C52}|Solution.CalcSalario\\Solution.CalcSalario.csproj|c:\\aplicacoes_eosti\\solution.calcsalario\\solution.calcsalario\\inss\\valorlimiteinss.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DF77ECE7-B310-4875-8247-3529A2056C52}|Solution.CalcSalario\\Solution.CalcSalario.csproj|solutionrelative:solution.calcsalario\\inss\\valorlimiteinss.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF77ECE7-B310-4875-8247-3529A2056C52}|Solution.CalcSalario\\Solution.CalcSalario.csproj|c:\\aplicacoes_eosti\\solution.calcsalario\\solution.calcsalario\\dependente\\dependentetable.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DF77ECE7-B310-4875-8247-3529A2056C52}|Solution.CalcSalario\\Solution.CalcSalario.csproj|solutionrelative:solution.calcsalario\\dependente\\dependentetable.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF77ECE7-B310-4875-8247-3529A2056C52}|Solution.CalcSalario\\Solution.CalcSalario.csproj|c:\\aplicacoes_eosti\\solution.calcsalario\\solution.calcsalario\\inss\\insstable.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DF77ECE7-B310-4875-8247-3529A2056C52}|Solution.CalcSalario\\Solution.CalcSalario.csproj|solutionrelative:solution.calcsalario\\inss\\insstable.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF77ECE7-B310-4875-8247-3529A2056C52}|Solution.CalcSalario\\Solution.CalcSalario.csproj|c:\\aplicacoes_eosti\\solution.calcsalario\\solution.calcsalario\\dependente\\dependente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF77ECE7-B310-4875-8247-3529A2056C52}|Solution.CalcSalario\\Solution.CalcSalario.csproj|solutionrelative:solution.calcsalario\\dependente\\dependente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF77ECE7-B310-4875-8247-3529A2056C52}|Solution.CalcSalario\\Solution.CalcSalario.csproj|c:\\aplicacoes_eosti\\solution.calcsalario\\solution.calcsalario\\frmcalculosalliquido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DF77ECE7-B310-4875-8247-3529A2056C52}|Solution.CalcSalario\\Solution.CalcSalario.csproj|solutionrelative:solution.calcsalario\\frmcalculosalliquido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DependenteTable.json",
+              "DocumentMoniker": "C:\\Aplicacoes_eosti\\Solution.CalcSalario\\Solution.CalcSalario\\Dependente\\DependenteTable.json",
+              "RelativeDocumentMoniker": "Solution.CalcSalario\\Dependente\\DependenteTable.json",
+              "ToolTip": "C:\\Aplicacoes_eosti\\Solution.CalcSalario\\Solution.CalcSalario\\Dependente\\DependenteTable.json",
+              "RelativeToolTip": "Solution.CalcSalario\\Dependente\\DependenteTable.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-02-27T19:31:08.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "inssTable.json",
+              "DocumentMoniker": "C:\\Aplicacoes_eosti\\Solution.CalcSalario\\Solution.CalcSalario\\INSS\\inssTable.json",
+              "RelativeDocumentMoniker": "Solution.CalcSalario\\INSS\\inssTable.json",
+              "ToolTip": "C:\\Aplicacoes_eosti\\Solution.CalcSalario\\Solution.CalcSalario\\INSS\\inssTable.json",
+              "RelativeToolTip": "Solution.CalcSalario\\INSS\\inssTable.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-02-27T19:30:41.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmCalculoSalLiquido.cs",
+              "DocumentMoniker": "C:\\Aplicacoes_eosti\\Solution.CalcSalario\\Solution.CalcSalario\\frmCalculoSalLiquido.cs",
+              "RelativeDocumentMoniker": "Solution.CalcSalario\\frmCalculoSalLiquido.cs",
+              "ToolTip": "C:\\Aplicacoes_eosti\\Solution.CalcSalario\\Solution.CalcSalario\\frmCalculoSalLiquido.cs",
+              "RelativeToolTip": "Solution.CalcSalario\\frmCalculoSalLiquido.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAYwBwAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T19:29:36.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "INSS.cs",
+              "DocumentMoniker": "C:\\Aplicacoes_eosti\\Solution.CalcSalario\\Solution.CalcSalario\\INSS\\INSS.cs",
+              "RelativeDocumentMoniker": "Solution.CalcSalario\\INSS\\INSS.cs",
+              "ToolTip": "C:\\Aplicacoes_eosti\\Solution.CalcSalario\\Solution.CalcSalario\\INSS\\INSS.cs",
+              "RelativeToolTip": "Solution.CalcSalario\\INSS\\INSS.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T19:29:02.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ValorLimiteINSS.json",
+              "DocumentMoniker": "C:\\Aplicacoes_eosti\\Solution.CalcSalario\\Solution.CalcSalario\\INSS\\ValorLimiteINSS.json",
+              "RelativeDocumentMoniker": "Solution.CalcSalario\\INSS\\ValorLimiteINSS.json",
+              "ToolTip": "C:\\Aplicacoes_eosti\\Solution.CalcSalario\\Solution.CalcSalario\\INSS\\ValorLimiteINSS.json",
+              "RelativeToolTip": "Solution.CalcSalario\\INSS\\ValorLimiteINSS.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-02-27T19:28:54.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CalculoSalLiquido.cs",
+              "DocumentMoniker": "C:\\Aplicacoes_eosti\\Solution.CalcSalario\\Solution.CalcSalario\\CalculoSalLiquido.cs",
+              "RelativeDocumentMoniker": "Solution.CalcSalario\\CalculoSalLiquido.cs",
+              "ToolTip": "C:\\Aplicacoes_eosti\\Solution.CalcSalario\\Solution.CalcSalario\\CalculoSalLiquido.cs",
+              "RelativeToolTip": "Solution.CalcSalario\\CalculoSalLiquido.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAlwDIAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T19:29:15.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Dependente.cs",
+              "DocumentMoniker": "C:\\Aplicacoes_eosti\\Solution.CalcSalario\\Solution.CalcSalario\\Dependente\\Dependente.cs",
+              "RelativeDocumentMoniker": "Solution.CalcSalario\\Dependente\\Dependente.cs",
+              "ToolTip": "C:\\Aplicacoes_eosti\\Solution.CalcSalario\\Solution.CalcSalario\\Dependente\\Dependente.cs",
+              "RelativeToolTip": "Solution.CalcSalario\\Dependente\\Dependente.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T19:31:10.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmCalculoSalLiquido.cs [Design]",
+              "DocumentMoniker": "C:\\Aplicacoes_eosti\\Solution.CalcSalario\\Solution.CalcSalario\\frmCalculoSalLiquido.cs",
+              "RelativeDocumentMoniker": "Solution.CalcSalario\\frmCalculoSalLiquido.cs",
+              "ToolTip": "C:\\Aplicacoes_eosti\\Solution.CalcSalario\\Solution.CalcSalario\\frmCalculoSalLiquido.cs [Design]",
+              "RelativeToolTip": "Solution.CalcSalario\\frmCalculoSalLiquido.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T19:27:45.734Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
