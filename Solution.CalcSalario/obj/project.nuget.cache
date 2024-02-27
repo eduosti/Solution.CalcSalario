@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "aG2ZZz8UFcnydDg0Iu8bnMCGJ+zOobVp1Pus6ado5oXohjyxdynkEjJBJxSVqJqihVpwjhJJ/J2RK1AFaNzZuw==",
+  "dgSpecHash": "4Ht38LUpvC8zNM+jIolB52EJwRl726AcKXc2J35DD8dINki71T32MqlUJb4mV9VKf1kKoO/9Vbf0ysiqhGZlTA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vanildo\\source\\repos\\Solution.CalcSalario\\Solution.CalcSalario\\Solution.CalcSalario.csproj",
+  "projectFilePath": "C:\\Aplicacoes_eosti\\Solution.CalcSalario\\Solution.CalcSalario\\Solution.CalcSalario.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Vanildo\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\Eduardo\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }
