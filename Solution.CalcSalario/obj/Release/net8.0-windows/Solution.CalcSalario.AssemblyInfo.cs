@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Solution.CalcSalario")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa7330744d538170afb0beaea52f56cb563d5853")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f4ee62e2232b0b5dbd834ef25ece016b417c994f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Solution.CalcSalario")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Solution.CalcSalario")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

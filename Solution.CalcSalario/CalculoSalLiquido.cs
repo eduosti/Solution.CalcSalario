@@ -1,11 +1,13 @@
 ﻿using Newtonsoft.Json;
-using Solution.CalcSalario.IR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using INSS;
+using IR;
+using DEPENDENTE;
 
 internal class CalculoSalLiquido
     {
@@ -21,56 +23,61 @@ internal class CalculoSalLiquido
 
 
     public static SalarioLiquidoResult CalculateSalarioLiquido(int varQtdDep, double varSalario, double varValorDesc)
-        {          
-            List<InssDados> inssTables = InssDados.LoadInssTable();            
+    {          
+         List<InssDados> inssTables = InssDados.LoadInssTable();
 
-            List<IRDados> IrTables = IRDados.LoadTableIR();            
+        List<ValorLimiteINSS> ValorLimiteInssList = ValorLimiteINSS.LoadInssValorLimite();
 
-            List<DependenteDados> DependenteTables = DependenteDados.LoadDependenteTable();
-            
+        List<IRDados> IrTables = IRDados.LoadTableIR();            
 
-        double DeducaoInss = 0;
+         List<DependenteDados> DependenteTables = DependenteDados.LoadDependenteTable();
+         
 
-            foreach (var inssTable in inssTables)
+         double DeducaoInss = 0;
+
+         foreach (var inssTable in inssTables)
+         {
+            if (varSalario >= inssTable.MinSalary && inssTable.MaxSalary == 0 || varSalario >= inssTable.MinSalary && varSalario <= inssTable.MaxSalary)
             {
-                if (varSalario >= inssTable.MinSalary && varSalario <= inssTable.MaxSalary)
-                {
-                    DeducaoInss += Math.Round(((varSalario * inssTable.Percentage) / 100) - inssTable.FixedValue, 2);
+                DeducaoInss += Math.Round(((varSalario * inssTable.Percentage) / 100) - inssTable.FixedValue, 2);
+            }            
+         }
 
-                }
-            }
-
-            double DeducaoIr = 0;
-            
-            double ValorTotalDependente = 0;
-
-
-            foreach (var DepTable in DependenteTables)
-            {
-                ValorTotalDependente = varQtdDep * DepTable.ValorDependente;
-            }
-
-            double SalarioBase = varSalario - DeducaoInss - ValorTotalDependente;
-
-            foreach (var irTable in IrTables)
-            {
-                if (SalarioBase >= irTable.MenorBaseDeCalculo && SalarioBase <= irTable.MaiorBaseDeCalculo)
-                {
-                    DeducaoIr = Math.Round(((SalarioBase * irTable.Aliquota) / 100) - irTable.ParcelaADeduzirDoIR, 2);
-
-                }
-            }
-
-            double salarioLiquido = Math.Round(varSalario - DeducaoInss - DeducaoIr - varValorDesc, 2);
-
-
-        return new SalarioLiquidoResult
+        foreach (var inssValorLimite in ValorLimiteInssList)
         {
-            ValorTotalDependente = ValorTotalDependente,
-            DeducaoInss = DeducaoInss,
-            DeducaoIr = DeducaoIr,
-            SalarioLiquido = salarioLiquido
-        };
+            if (DeducaoInss >= inssValorLimite.ValorLimiteInssDados)
+            {
+                DeducaoInss = inssValorLimite.ValorLimiteInssDados;
+            }
+        }
+
+                double DeducaoIr = 0;         
+         double ValorTotalDependente = 0;
+         
+         foreach (var DepTable in DependenteTables)
+         {
+             ValorTotalDependente = varQtdDep * DepTable.ValorDependente;
+         }
+
+         double SalarioBase = varSalario - DeducaoInss - ValorTotalDependente;
+
+         foreach (var irTable in IrTables)
+         {
+            if (SalarioBase >= irTable.MenorBaseDeCalculo && irTable.MaiorBaseDeCalculo == 0 || SalarioBase >= irTable.MenorBaseDeCalculo && SalarioBase <= irTable.MaiorBaseDeCalculo)
+            {
+                DeducaoIr = Math.Round(((SalarioBase * irTable.Aliquota) / 100) - irTable.ParcelaADeduzirDoIR, 2);
+            }
+         }
+
+         double salarioLiquido = Math.Round(varSalario - DeducaoInss - DeducaoIr - varValorDesc, 2);
+
+         return new SalarioLiquidoResult
+         {
+             ValorTotalDependente = ValorTotalDependente,
+             DeducaoInss = DeducaoInss,
+             DeducaoIr = DeducaoIr,
+             SalarioLiquido = salarioLiquido
+         };
     }
 }
 
